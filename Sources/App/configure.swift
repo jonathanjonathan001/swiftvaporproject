@@ -6,7 +6,7 @@ public func configure(_ app: Application) async throws {
     //app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
   
     let fileMiddleware = FileMiddleware(
-        publicDirectory: app.directory.publicDirectory
+        publicDirectory: app.directory.publicDirectory, defaultFile: "index.html"
     )
     app.middleware.use(fileMiddleware)
     
